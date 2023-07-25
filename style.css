@@ -12,6 +12,7 @@ body {
 .header-h1 {
   font-size: 65px;
 }
+
 .container-grid {
   display: flex;
   width: 500px;
