@@ -49,24 +49,42 @@ function eraseGrid() {
   });
 }
 
+function getRandomColor() {
+  let letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function rainbow() {
+  divs.forEach((item) => {
+    item.addEventListener("mouseover", function (e) {
+      e.target.style.backgroundColor = getRandomColor();
+    });
+  });
+}
+
 createDivs(16);
 const divs = document.querySelectorAll(".column");
 //console.log(divs);
-function changeColor() {
+
+function chooseColor() {
+  let chosedColor = colorsbttn.value;
   divs.forEach((item) => {
     item.addEventListener("mouseover", function (e) {
-      e.target.style.backgroundColor = "black";
+      e.target.style.backgroundColor = chosedColor;
     });
   });
 }
 
 const clearbttn = document.querySelector(".clear");
 const eraserbttn = document.querySelector(".eraser");
-const blackbttn = document.querySelector(".black");
 const rainbowbttn = document.querySelector(".rgb");
-const colorsbttn = document.querySelector(".colors");
-const colorInput = document.querySelector("#color");
+const colorsbttn = document.querySelector("#color");
 
-blackbttn.addEventListener("click", changeColor);
+rainbowbttn.addEventListener("click", rainbow);
 clearbttn.addEventListener("click", clearGrid);
 eraserbttn.addEventListener("click", eraseGrid);
+colorsbttn.addEventListener("input", chooseColor);

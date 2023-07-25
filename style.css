@@ -13,11 +13,22 @@ body {
   font-size: 65px;
 }
 
+.container-box {
+  display: flex;
+  justify-content: center;
+}
+
+.bttn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .container-grid {
   display: flex;
   width: 500px;
   height: 500px;
-  margin: 100px auto;
+  margin: 10px 10px;
   flex-direction: column;
   justify-content: center;
   border: 2px solid black;
@@ -37,7 +48,7 @@ body {
 }
 
 footer {
-  font-size: 25px;
+  font-size: 20px;
   bottom: 0;
   justify-content: center;
   padding-top: 50px;
