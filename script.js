@@ -1,5 +1,5 @@
 const container = document.querySelector(".container-grid");
-
+createDivs(16);
 // create new grid
 function createDivs(num) {
   for (let i = 1; i <= num; i++) {
@@ -43,3 +43,23 @@ mySlider.addEventListener("input", function () {
   resetDivs();
   createDivs(num);
 });
+
+function clearGrid() {
+  divs.forEach((item) => {
+    item.style.backgroundColor = null;
+  });
+}
+
+function eraseGrid() {
+  divs.forEach((item) => {
+    item.addEventListener("mouseover", function () {
+      item.style.backgroundColor = "red";
+    });
+  });
+}
+
+const clearbttn = document.querySelector(".clear");
+const eraserbttn = document.querySelector(".eraser");
+
+clearbttn.addEventListener("click", clearGrid);
+eraserbttn.addEventListener("click", eraseGrid);
