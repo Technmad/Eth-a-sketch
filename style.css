@@ -7,7 +7,7 @@
 body {
   width: 100%;
 }
-.container {
+.container-grid {
   display: flex;
   width: 650px;
   height: 650px;
