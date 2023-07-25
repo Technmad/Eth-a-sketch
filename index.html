@@ -11,15 +11,29 @@
       <h1 class="header-h1">Eth-a-sketch</h1>
       <p class="grid-value"></p>
     </header>
-    <section class="bttn">
-      <button class="clear">clear</button>
-      <button class="eraser">eraser</button>
-      <div class="slider">
-        <input id="my-slider" type="range" min="1" max="60" value="16" />
-        <p id="rangeValue">16</p>
-      </div>
-    </section>
-    <div class="container-grid"></div>
+    <div class="container-box">
+      <section class="bttn">
+        <button class="clear">clear</button>
+        <button class="eraser">eraser</button>
+        <button class="black">Black</button>
+        <button class="rgb">Rainbow</button>
+        <div class="colorPrompt">
+          <imput type="color" id="color">
+            <button class="colors">Colors</button>
+          </imput>
+        </div>
+        <div class="slider">
+          <input id="my-slider" type="range" min="2" max="60" value="16" />
+          <p id="rangeValue">16</p>
+        </div>
+      </section>
+      <div class="container-grid"></div>
+    </div>
+    
+    <footer>
+      Made by: <a href=https://github.com/Technmad> <img id="gh-logo" src="githublogo.png" alt="github logo" />Anurag Pathak </a>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

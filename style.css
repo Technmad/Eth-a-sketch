@@ -35,3 +35,26 @@ body {
   border: 1px solid black;
   flex: 1;
 }
+
+footer {
+  font-size: 25px;
+  bottom: 0;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#gh-logo {
+  width: 35px;
+  height: 35px;
+  margin-bottom: -9px;
+  margin-right: 10px;
+}

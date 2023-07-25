@@ -1,5 +1,5 @@
 const container = document.querySelector(".container-grid");
-createDivs(16);
+
 // create new grid
 function createDivs(num) {
   for (let i = 1; i <= num; i++) {
@@ -23,15 +23,6 @@ function resetDivs() {
     container.removeChild(container.firstChild);
   }
 }
-
-// each small box in a grid is divs
-const divs = document.querySelectorAll(".column");
-//console.log(divs);
-divs.forEach((item) => {
-  item.addEventListener("mouseover", function () {
-    item.style.backgroundColor = "pink";
-  });
-});
 
 // Slider
 const mySlider = document.querySelector("#my-slider");
@@ -58,8 +49,24 @@ function eraseGrid() {
   });
 }
 
+createDivs(16);
+const divs = document.querySelectorAll(".column");
+//console.log(divs);
+function changeColor() {
+  divs.forEach((item) => {
+    item.addEventListener("mouseover", function (e) {
+      e.target.style.backgroundColor = "black";
+    });
+  });
+}
+
 const clearbttn = document.querySelector(".clear");
 const eraserbttn = document.querySelector(".eraser");
+const blackbttn = document.querySelector(".black");
+const rainbowbttn = document.querySelector(".rgb");
+const colorsbttn = document.querySelector(".colors");
+const colorInput = document.querySelector("#color");
 
+blackbttn.addEventListener("click", changeColor);
 clearbttn.addEventListener("click", clearGrid);
 eraserbttn.addEventListener("click", eraseGrid);
