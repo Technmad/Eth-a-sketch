@@ -36,12 +36,14 @@ mySlider.addEventListener("input", function () {
 });
 
 function clearGrid() {
+  let divs = document.querySelectorAll(".column");
   divs.forEach((item) => {
     item.style.backgroundColor = null;
   });
 }
 
 function eraseGrid() {
+  let divs = document.querySelectorAll(".column");
   divs.forEach((item) => {
     item.addEventListener("mouseover", function () {
       item.style.backgroundColor = "red";
@@ -59,6 +61,7 @@ function getRandomColor() {
 }
 
 function rainbow() {
+  let divs = document.querySelectorAll(".column");
   divs.forEach((item) => {
     item.addEventListener("mouseover", function (e) {
       e.target.style.backgroundColor = getRandomColor();
@@ -67,11 +70,10 @@ function rainbow() {
 }
 
 createDivs(16);
-const divs = document.querySelectorAll(".column");
-//console.log(divs);
 
 function chooseColor() {
   let chosedColor = colorsbttn.value;
+  let divs = document.querySelectorAll(".column");
   divs.forEach((item) => {
     item.addEventListener("mouseover", function (e) {
       e.target.style.backgroundColor = chosedColor;
